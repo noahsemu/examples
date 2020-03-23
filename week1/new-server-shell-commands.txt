@@ -1,0 +1,54 @@
+# These commands are for running on an Ubuntu server.
+
+# First, tell the package manager (apt) to update it's list of what packages it
+# knows about on the various repositories it will install packages from.
+sudo apt update
+
+# Install git.
+sudo apt install git
+
+# Install python's package manager (pip).
+sudo apt install python3-pip
+
+# Install a python tool for creating separate development environments.
+pip3 install pipenv
+
+# Create a new directory.
+mkdir myproject
+
+# Change into that directory.
+cd myproject
+
+# Get a bash shell where the environment variables have been changed to
+# simplify using the development environment in the current directory.
+pipenv shell
+
+# Start a python REPL.
+python
+
+# Use CTRL-d to exit the REPL.
+
+# Install a nicer python REPL.
+pipenv install ipython
+
+# Start the nicer python REPL.
+ipython
+
+# Install the python "bottle" library so it's accessible for the project
+# you're creating in the current directory. Bottle is a microframework for
+# web application development.
+pipenv install bottle
+
+# Clone the git repo.
+git clone git@github.com:StudentDevs/examples.git
+
+# For editing files, use the command "nano" if you're new to the linux command
+# line. Going forward, it's a good thing to learn either "vi" or "emacs", the
+# two standard linux command line text editors. Google for tutorials on how to
+# use either vi or emacs.
+
+# When you've created a python script you want to execute, you can run it with:
+python FILENAME
+
+# If you get an error that the "python" command is not found, it means you need
+# to run "pipenv shell" to get your environment set correctly for the directory.
