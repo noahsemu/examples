@@ -2,13 +2,13 @@
 
 # First, tell the package manager (apt) to update it's list of what packages it
 # knows about on the various repositories it will install packages from.
-sudo apt update
+apt update
 
 # Install git.
-sudo apt install git
+apt install git
 
 # Install python's package manager (pip).
-sudo apt install python3-pip
+apt install python3-pip
 
 # Install a python tool for creating separate development environments.
 pip3 install pipenv
@@ -34,13 +34,15 @@ pipenv install ipython
 # Start the nicer python REPL.
 ipython
 
+# Use CTRL-d to exit the REPL.
+
 # Install the python "bottle" library so it's accessible for the project
 # you're creating in the current directory. Bottle is a microframework for
 # web application development.
 pipenv install bottle
 
 # Clone the git repo.
-git clone git@github.com:StudentDevs/examples.git
+git clone https://github.com/StudentDevs/examples.git
 
 # For editing files, use the command "nano" if you're new to the linux command
 # line. Going forward, it's a good thing to learn either "vi" or "emacs", the
